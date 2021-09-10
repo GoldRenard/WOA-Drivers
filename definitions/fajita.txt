@@ -1,3 +1,4 @@
+\components\AnySoC\Support
 \components\SDM845\Platform\minimal
 \components\SDM845\Platform\GPIO
 \components\SDM845\Platform\Subsys
@@ -14,3 +15,4 @@
 \components\SDM845\Platform\Archive\IOMMU\10730
 \components\SDM845\Platform\Archive\SMMU\10420
 \components\SDM845\Device\Oneplus\GPU
+\components\SDM845\Device\Oneplus\Display

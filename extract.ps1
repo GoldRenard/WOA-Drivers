@@ -36,5 +36,10 @@ Get-ChildItem `
             $_.FullName `
                 -Replace '\.inf_','.inf' `
         }
+Copy-Item `
+	-Force `
+	-Recurse `
+	-Path ".\inject.bat" `
+	-Destination $Output
 Write-Output "done"
 

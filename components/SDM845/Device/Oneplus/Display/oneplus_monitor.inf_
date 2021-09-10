@@ -1,0 +1,44 @@
+[Version]
+Signature   = "$Windows NT$"
+Class       = Monitor
+ClassGuid   = {4d36e96e-e325-11ce-bfc1-08002be10318}
+Provider    = %RENEGADE%
+DriverVer   = 09/09/2021,1.0.0.0
+PnpLockdown = 1
+
+CatalogFile.NTarm64 = oneplus_monitor.cat
+
+; Don't show this driver as an option to install for other devices
+[ControlFlags]
+ExcludeFromSelect=*
+
+[Manufacturer]
+%SAMSUNG%      = RENEGADE,NTarm64
+
+[RENEGADE.NTarm64]
+%S6E3FC2X01%   = S6E3FC2X01, Monitor\SAM0015
+%SOFEF00%      = SOFEF00, Monitor\SAM0016
+
+[SOFEF00]
+AddReg         = SOFEF00.AddReg
+
+[SOFEF00.AddReg]
+HKR,, PreferredScaleFactor, %REG_DWORD%, 225
+HKR,, MaxResolution       , %REG_SZ%   , "1080,2280"
+
+[S6E3FC2X01]
+AddReg         = S6E3FC2X01.AddReg
+
+[S6E3FC2X01.AddReg]
+HKR,, PreferredScaleFactor, %REG_DWORD%, 225
+HKR,, MaxResolution       , %REG_SZ%   , "1080,2340"
+
+[Strings]
+; Non-Localizable Strings
+REG_DWORD  = 0x10001
+REG_SZ     = 0x00000
+; User visible strings
+RENEGADE   = "Renegade Project"
+SAMSUNG    = "Samsung"
+SOFEF00    = "Samsung 6.28-inch 1080x2280 (FHD+) 402ppi AMOLED 16.7M Colors Display Panel (SOFEF00)"
+S6E3FC2X01 = "Samsung 6.41-inch 1080x2340 (FHD+) 402ppi AMOLED 16.7M Colors Display Panel (S6E3FC2X01)"

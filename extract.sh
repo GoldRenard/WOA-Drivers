@@ -25,5 +25,6 @@ done<"${CONFIG}"
 echo "rename drivers..."
 find output -type f -name '*.inf_'|while read -r line
 do mv "${line}" "${line//.inf_/.inf}"
+cp inject.bat output/inject.bat
 done
 echo "done"
